@@ -19,7 +19,7 @@ run = ["dotnet", "run"]
 deploymentTarget = "cloudrun"
 
 [workflows]
-runButton = "Build MAUI App"
+runButton = "Run Console App"
 
 [[workflows.workflow]]
 name = "Build Android"
@@ -46,3 +46,20 @@ args = "dotnet restore"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "dotnet build"
+
+[[workflows.workflow]]
+name = "Run Console App"
+author = 41140666
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "dotnet restore"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "dotnet build"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "dotnet run"
