@@ -1,20 +1,35 @@
 
-using System;
+namespace FlapCheckApp.Pages;
 
-namespace FlapCheckApp.Pages
+public partial class InspectionsPage : ContentPage
 {
-    // Console version of InspectionsPage - functionality moved to main.cs
-    public class InspectionsPage
+    public InspectionsPage()
     {
-        public static void ShowInspectionsMenu()
-        {
-            Console.WriteLine("\n=== Inspections Module ===");
-            Console.WriteLine("Available options:");
-            Console.WriteLine("1. Repair Orders");
-            Console.WriteLine("2. Worksheets");
-            Console.WriteLine("3. NDT Reports");
-            Console.WriteLine("4. Parts Management");
-            Console.WriteLine("5. Invoicing");
-        }
+        InitializeComponent();
+    }
+
+    private async void OnRepairOrderClicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(RepairOrderPage));
+    }
+
+    private async void OnWorksheetClicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(WorksheetPage));
+    }
+
+    private async void OnNDTReportClicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(NDTReportPage));
+    }
+
+    private async void OnPartsClicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(PartsPage));
+    }
+
+    private async void OnInvoicingClicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(InvoicingPage));
     }
 }

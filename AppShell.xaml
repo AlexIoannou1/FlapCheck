@@ -30,34 +30,3 @@
     </TabBar>
 
 </Shell>
-<?xml version="1.0" encoding="UTF-8" ?>
-<Shell
-    x:Class="FlapCheckApp.AppShell"
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:FlapCheckApp.Pages"
-    Shell.FlyoutBehavior="Flyout">
-
-    <TabBar>
-        <ShellContent
-            Title="Dashboard"
-            ContentTemplate="{DataTemplate local:DashboardPage}"
-            Route="DashboardPage" />
-
-        <ShellContent
-            Title="Inspections"
-            ContentTemplate="{DataTemplate local:InspectionsPage}"
-            Route="InspectionsPage" />
-
-        <ShellContent
-            Title="Stock"
-            ContentTemplate="{DataTemplate local:StockPage}"
-            Route="StockPage" />
-
-        <ShellContent
-            Title="Notifications"
-            ContentTemplate="{DataTemplate local:NotificationsPage}"
-            Route="NotificationsPage" />
-    </TabBar>
-
-</Shell>

@@ -1,6 +1,4 @@
 
-using Microsoft.Maui.Controls;
-
 namespace FlapCheckApp;
 
 public partial class AppShell : Shell
