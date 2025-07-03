@@ -9,6 +9,7 @@ namespace FlapCheckApp
         {
             Console.WriteLine("=== FlapCheck NDT Inspection App ===");
             Console.WriteLine("Mobile app structure prototype");
+            Console.WriteLine("Note: Running in console mode due to environment limitations");
             Console.WriteLine();
             
             ShowMainMenu();
