@@ -2,7 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net7.0-android</TargetFrameworks>
+    <TargetFramework>net7.0</TargetFramework>
     <OutputType>Exe</OutputType>
     <RootNamespace>FlapCheckApp</RootNamespace>
     <UseMaui>true</UseMaui>
@@ -12,8 +12,6 @@
     <!-- Display Version -->
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
     <ApplicationVersion>1</ApplicationVersion>
-
-    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
   </PropertyGroup>
 
   <ItemGroup>
