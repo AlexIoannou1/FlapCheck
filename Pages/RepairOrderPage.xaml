@@ -1,0 +1,47 @@
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlapCheckApp.Pages.RepairOrderPage"
+             Title="Repair Order">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="15" Padding="20">
+            
+            <Label Text="Repair Order Submission" 
+                   FontSize="20" 
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Frame BackgroundColor="LightGray" HasShadow="True">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Order Information" FontSize="16" FontAttributes="Bold" />
+                    
+                    <Entry Placeholder="Order Number" />
+                    <Entry Placeholder="Customer Name" />
+                    <DatePicker x:Name="OrderDate" />
+                    <TimePicker x:Name="OrderTime" />
+                    
+                    <Label Text="Inspection Details" FontSize="14" FontAttributes="Bold" />
+                    <Editor Placeholder="Describe inspection requirements..." HeightRequest="100" />
+                    
+                    <Label Text="Priority Level" FontSize="14" FontAttributes="Bold" />
+                    <Picker Title="Select Priority">
+                        <Picker.Items>
+                            <x:String>Low</x:String>
+                            <x:String>Medium</x:String>
+                            <x:String>High</x:String>
+                            <x:String>Critical</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button Text="Save Draft" BackgroundColor="Orange" TextColor="White" />
+            <Button Text="Submit Order" BackgroundColor="Green" TextColor="White" />
+            <Button Text="Back to Workflow" BackgroundColor="Gray" TextColor="White" Clicked="OnBackClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,51 @@
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlapCheckApp.Pages.NDTReportPage"
+             Title="NDT Report">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="15" Padding="20">
+            
+            <Label Text="NDT Report Generation" 
+                   FontSize="20" 
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Frame BackgroundColor="LightGreen" HasShadow="True">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Report Information" FontSize="16" FontAttributes="Bold" />
+                    
+                    <Entry Placeholder="Report Number" />
+                    <Entry Placeholder="Inspector Name" />
+                    <DatePicker x:Name="InspectionDate" />
+                    
+                    <Label Text="Test Results" FontSize="14" FontAttributes="Bold" />
+                    <Editor Placeholder="Document inspection findings..." HeightRequest="100" />
+                    
+                    <Label Text="Defects Found" FontSize="14" FontAttributes="Bold" />
+                    <CheckBox x:Name="DefectsFoundCheckbox" />
+                    
+                    <Label Text="Images" FontSize="14" FontAttributes="Bold" />
+                    <Button Text="Add Photo" BackgroundColor="DarkBlue" TextColor="White" />
+                    
+                    <Label Text="Conclusion" FontSize="14" FontAttributes="Bold" />
+                    <Picker Title="Select Result">
+                        <Picker.Items>
+                            <x:String>Passed</x:String>
+                            <x:String>Failed</x:String>
+                            <x:String>Requires Further Testing</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button Text="Save Report" BackgroundColor="Green" TextColor="White" />
+            <Button Text="Generate PDF" BackgroundColor="Red" TextColor="White" />
+            <Button Text="Back to Workflow" BackgroundColor="Gray" TextColor="White" Clicked="OnBackClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

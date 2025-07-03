@@ -1,0 +1,58 @@
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlapCheckApp.Pages.NotificationsPage"
+             Title="Notifications">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="15" Padding="20">
+            
+            <Label Text="Notification Center" 
+                   FontSize="20" 
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Frame BackgroundColor="LightYellow" HasShadow="True">
+                <VerticalStackLayout>
+                    <Label Text="Upcoming Checks" FontSize="16" FontAttributes="Bold" />
+                    <Label Text="Control and Calibration check notifications" FontSize="12" TextColor="Gray" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Calibration Checks -->
+            <Label Text="Calibration Checks" FontSize="16" FontAttributes="Bold" />
+            
+            <Frame BackgroundColor="White" HasShadow="True">
+                <VerticalStackLayout>
+                    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="10">
+                        <VerticalStackLayout Grid.Column="0">
+                            <Label Text="Equipment Calibration Due" FontAttributes="Bold" />
+                            <Label Text="Due: No pending calibrations" FontSize="12" TextColor="Green" />
+                        </VerticalStackLayout>
+                        <Button Grid.Column="1" Text="Mark Done" BackgroundColor="Green" TextColor="White" IsEnabled="False" />
+                    </Grid>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Control Checks -->
+            <Label Text="Control Checks" FontSize="16" FontAttributes="Bold" />
+            
+            <Frame BackgroundColor="White" HasShadow="True">
+                <VerticalStackLayout>
+                    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="10">
+                        <VerticalStackLayout Grid.Column="0">
+                            <Label Text="Quality Control Check" FontAttributes="Bold" />
+                            <Label Text="Due: No pending controls" FontSize="12" TextColor="Green" />
+                        </VerticalStackLayout>
+                        <Button Grid.Column="1" Text="Mark Done" BackgroundColor="Green" TextColor="White" IsEnabled="False" />
+                    </Grid>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button Text="Refresh Notifications" BackgroundColor="Blue" TextColor="White" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,43 @@
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlapCheckApp.Pages.StockPage"
+             Title="Stock Management">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="15" Padding="20">
+            
+            <Label Text="Stock Management" 
+                   FontSize="20" 
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <SearchBar Placeholder="Search stock items..." />
+
+            <Button Text="Add New Stock Item" BackgroundColor="Green" TextColor="White" />
+            <Button Text="Scan Barcode" BackgroundColor="Blue" TextColor="White" />
+
+            <Frame BackgroundColor="White" HasShadow="True">
+                <VerticalStackLayout>
+                    <Label Text="Stock Summary" FontSize="16" FontAttributes="Bold" />
+                    <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto" ColumnSpacing="10" RowSpacing="5">
+                        <Label Grid.Column="0" Grid.Row="0" Text="Total Items:" FontAttributes="Bold" />
+                        <Label Grid.Column="1" Grid.Row="0" Text="0" />
+                        <Label Grid.Column="0" Grid.Row="1" Text="Low Stock Items:" FontAttributes="Bold" />
+                        <Label Grid.Column="1" Grid.Row="1" Text="0" TextColor="Red" />
+                    </Grid>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Label Text="Recent Stock Items" FontSize="16" FontAttributes="Bold" />
+            
+            <!-- Placeholder for stock items list -->
+            <Frame BackgroundColor="LightGray" HasShadow="True">
+                <Label Text="No stock items found. Add items to get started." HorizontalOptions="Center" />
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

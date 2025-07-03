@@ -1,0 +1,64 @@
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlapCheckApp.Pages.DashboardPage"
+             Title="FlapCheck Dashboard">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="20">
+            
+            <Label Text="NDT Workflow &amp; Document Management" 
+                   FontSize="24" 
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Frame BackgroundColor="LightBlue" HasShadow="True">
+                <VerticalStackLayout>
+                    <Label Text="Quick Stats" FontSize="18" FontAttributes="Bold" />
+                    <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto" ColumnSpacing="10" RowSpacing="10">
+                        <Frame Grid.Column="0" Grid.Row="0" BackgroundColor="White">
+                            <VerticalStackLayout>
+                                <Label Text="0" FontSize="32" FontAttributes="Bold" HorizontalOptions="Center" />
+                                <Label Text="Active Inspections" FontSize="12" HorizontalOptions="Center" />
+                            </VerticalStackLayout>
+                        </Frame>
+                        <Frame Grid.Column="1" Grid.Row="0" BackgroundColor="White">
+                            <VerticalStackLayout>
+                                <Label Text="0" FontSize="32" FontAttributes="Bold" HorizontalOptions="Center" />
+                                <Label Text="Pending Reports" FontSize="12" HorizontalOptions="Center" />
+                            </VerticalStackLayout>
+                        </Frame>
+                        <Frame Grid.Column="0" Grid.Row="1" BackgroundColor="White">
+                            <VerticalStackLayout>
+                                <Label Text="0" FontSize="32" FontAttributes="Bold" HorizontalOptions="Center" />
+                                <Label Text="Due Calibrations" FontSize="12" HorizontalOptions="Center" />
+                            </VerticalStackLayout>
+                        </Frame>
+                        <Frame Grid.Column="1" Grid.Row="1" BackgroundColor="White">
+                            <VerticalStackLayout>
+                                <Label Text="0" FontSize="32" FontAttributes="Bold" HorizontalOptions="Center" />
+                                <Label Text="Stock Items" FontSize="12" HorizontalOptions="Center" />
+                            </VerticalStackLayout>
+                        </Frame>
+                    </Grid>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="LightGreen" HasShadow="True">
+                <VerticalStackLayout>
+                    <Label Text="Inspection Types" FontSize="18" FontAttributes="Bold" />
+                    <Label Text="• Industry Services: Metallic Structures, LPG Tanks, Welder Approvals" />
+                    <Label Text="• Aviation Services: Wheels, Brakes, NDT" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button Text="Start New Inspection" 
+                    BackgroundColor="DarkBlue" 
+                    TextColor="White"
+                    Clicked="OnStartInspectionClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -17,3 +17,15 @@ channel = "stable-24_05"
 [deployment]
 run = ["dotnet", "run"]
 deploymentTarget = "cloudrun"
+
+[workflows]
+runButton = "Build Android"
+
+[[workflows.workflow]]
+name = "Build Android"
+author = 41140666
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "dotnet build -f net7.0-android"

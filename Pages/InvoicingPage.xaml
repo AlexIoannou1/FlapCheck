@@ -1,0 +1,46 @@
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlapCheckApp.Pages.InvoicingPage"
+             Title="Invoicing">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="15" Padding="20">
+            
+            <Label Text="Invoicing" 
+                   FontSize="20" 
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Frame BackgroundColor="LightGoldenrodYellow" HasShadow="True">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Invoice Details" FontSize="16" FontAttributes="Bold" />
+                    
+                    <Entry Placeholder="Invoice Number" />
+                    <Entry Placeholder="Customer Name" />
+                    <DatePicker x:Name="InvoiceDate" />
+                    
+                    <Label Text="Service Details" FontSize="14" FontAttributes="Bold" />
+                    <Entry Placeholder="Service Description" />
+                    <Entry Placeholder="Hours Worked" Keyboard="Numeric" />
+                    <Entry Placeholder="Hourly Rate" Keyboard="Numeric" />
+                    
+                    <Label Text="Parts Cost" FontSize="14" FontAttributes="Bold" />
+                    <Entry Placeholder="Total Parts Cost" Keyboard="Numeric" />
+                    
+                    <Label Text="Additional Charges" FontSize="14" FontAttributes="Bold" />
+                    <Entry Placeholder="Travel Expenses" Keyboard="Numeric" />
+                    <Entry Placeholder="Other Fees" Keyboard="Numeric" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button Text="Calculate Total" BackgroundColor="Blue" TextColor="White" />
+            <Button Text="Generate Invoice" BackgroundColor="Green" TextColor="White" />
+            <Button Text="Send to Customer" BackgroundColor="Orange" TextColor="White" />
+            <Button Text="Back to Workflow" BackgroundColor="Gray" TextColor="White" Clicked="OnBackClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

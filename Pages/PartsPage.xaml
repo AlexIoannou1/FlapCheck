@@ -1,0 +1,46 @@
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlapCheckApp.Pages.PartsPage"
+             Title="Parts Recording">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="15" Padding="20">
+            
+            <Label Text="Parts Recording" 
+                   FontSize="20" 
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Frame BackgroundColor="LightCoral" HasShadow="True">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Part Information" FontSize="16" FontAttributes="Bold" />
+                    
+                    <Entry Placeholder="Part Number" />
+                    <Entry Placeholder="Part Description" />
+                    <Entry Placeholder="Quantity Used" Keyboard="Numeric" />
+                    <Entry Placeholder="Supplier" />
+                    <Entry Placeholder="Batch/Lot Number" />
+                    
+                    <Label Text="Condition" FontSize="14" FontAttributes="Bold" />
+                    <Picker Title="Select Condition">
+                        <Picker.Items>
+                            <x:String>New</x:String>
+                            <x:String>Serviceable</x:String>
+                            <x:String>Repairable</x:String>
+                            <x:String>Scrap</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button Text="Add Part" BackgroundColor="Blue" TextColor="White" />
+            <Button Text="Scan Barcode" BackgroundColor="Purple" TextColor="White" />
+            <Button Text="Save Parts List" BackgroundColor="Green" TextColor="White" />
+            <Button Text="Back to Workflow" BackgroundColor="Gray" TextColor="White" Clicked="OnBackClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

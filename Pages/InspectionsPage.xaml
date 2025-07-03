@@ -1,0 +1,106 @@
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlapCheckApp.Pages.InspectionsPage"
+             Title="Inspections">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="15" Padding="20">
+            
+            <Label Text="Inspection Workflow" 
+                   FontSize="22" 
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Frame BackgroundColor="LightYellow" HasShadow="True">
+                <VerticalStackLayout>
+                    <Label Text="Inspection Type Selection" FontSize="16" FontAttributes="Bold" />
+                    <Picker x:Name="InspectionTypePicker" Title="Select Inspection Type">
+                        <Picker.Items>
+                            <x:String>Industry - Metallic Structures (Visual)</x:String>
+                            <x:String>Industry - Metallic Structures (Magnetic Particle)</x:String>
+                            <x:String>Industry - Metallic Structures (Penetrant)</x:String>
+                            <x:String>Industry - Metallic Structures (Ultrasonic)</x:String>
+                            <x:String>Industry - LPG Tanks</x:String>
+                            <x:String>Industry - Welder Approvals</x:String>
+                            <x:String>Aviation - Wheels (Tire change/Overhaul)</x:String>
+                            <x:String>Aviation - Brakes (Repairing/Overhaul)</x:String>
+                            <x:String>Aviation - Non-Destructive Testing (NDT)</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Label Text="Workflow Steps" FontSize="18" FontAttributes="Bold" />
+
+            <!-- Step 1: Repair Order -->
+            <Frame BackgroundColor="White" HasShadow="True">
+                <VerticalStackLayout>
+                    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="10">
+                        <Label Grid.Column="0" Text="1. Repair Order Submission" FontSize="16" FontAttributes="Bold" VerticalOptions="Center" />
+                        <Button Grid.Column="1" Text="Start" BackgroundColor="Green" TextColor="White" Clicked="OnRepairOrderClicked" />
+                    </Grid>
+                    <Label Text="Submit repair order with inspection information" FontSize="12" TextColor="Gray" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Step 2: Worksheet -->
+            <Frame BackgroundColor="White" HasShadow="True">
+                <VerticalStackLayout>
+                    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="10">
+                        <Label Grid.Column="0" Text="2. Worksheet Submission" FontSize="16" FontAttributes="Bold" VerticalOptions="Center" />
+                        <Button Grid.Column="1" Text="Start" BackgroundColor="Orange" TextColor="White" Clicked="OnWorksheetClicked" />
+                    </Grid>
+                    <Label Text="Complete worksheet for specific components (Industry only)" FontSize="12" TextColor="Gray" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Step 3: NDT Report -->
+            <Frame BackgroundColor="White" HasShadow="True">
+                <VerticalStackLayout>
+                    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="10">
+                        <Label Grid.Column="0" Text="3. NDT Report Generation" FontSize="16" FontAttributes="Bold" VerticalOptions="Center" />
+                        <Button Grid.Column="1" Text="Start" BackgroundColor="Blue" TextColor="White" Clicked="OnNDTReportClicked" />
+                    </Grid>
+                    <Label Text="Fill required reports for selected inspection type" FontSize="12" TextColor="Gray" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Step 4: Parts -->
+            <Frame BackgroundColor="White" HasShadow="True">
+                <VerticalStackLayout>
+                    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="10">
+                        <Label Grid.Column="0" Text="4. Parts Recording" FontSize="16" FontAttributes="Bold" VerticalOptions="Center" />
+                        <Button Grid.Column="1" Text="Start" BackgroundColor="Purple" TextColor="White" Clicked="OnPartsClicked" />
+                    </Grid>
+                    <Label Text="Record parts used during inspection work" FontSize="12" TextColor="Gray" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Step 5: EASA F1 -->
+            <Frame BackgroundColor="White" HasShadow="True">
+                <VerticalStackLayout>
+                    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="10">
+                        <Label Grid.Column="0" Text="5. Issue EASA F1 Certificate" FontSize="16" FontAttributes="Bold" VerticalOptions="Center" />
+                        <Button Grid.Column="1" Text="Generate" BackgroundColor="DarkGreen" TextColor="White" />
+                    </Grid>
+                    <Label Text="Generate certification of compliance (where applicable)" FontSize="12" TextColor="Gray" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Step 6: Invoicing -->
+            <Frame BackgroundColor="White" HasShadow="True">
+                <VerticalStackLayout>
+                    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="10">
+                        <Label Grid.Column="0" Text="6. Invoicing" FontSize="16" FontAttributes="Bold" VerticalOptions="Center" />
+                        <Button Grid.Column="1" Text="Create" BackgroundColor="DarkRed" TextColor="White" Clicked="OnInvoicingClicked" />
+                    </Grid>
+                    <Label Text="Generate invoice for completed inspection" FontSize="12" TextColor="Gray" />
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
