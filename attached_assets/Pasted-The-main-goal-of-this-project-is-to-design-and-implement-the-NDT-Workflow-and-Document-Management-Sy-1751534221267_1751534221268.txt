@@ -1,0 +1,41 @@
+The main goal of this project is to design and implement the NDT Workflow and Document Management System “FlapCheck”.
+NDT Inspections provides non-destructive tests utilizing its professionally trained inspectors and its state-of-the-art equipment. Although, NDT Inspections does not utilize any software for internal organizing and data management, meaning that NDT’s employees handle any communication, document processes and exchange through their personal laptops and by using their personal e-mails and Dropbox. For every inspection, a big number of documents is created and organizing, storing and auditing them is vital.
+NDT Inspections has requested a web application, that is accessible from anywhere and will be used to manage the processes that are taking place within the company and digitize procedures. The new proposed system should be able to handle the bulk of the documents that will be generated and provide an easy-to-use interface to manage and trail them.
+This initiative aims to develop a system that will digitize NDT’s daily procedures. More specifically, the system should cover the needs for:
+ Account management
+ Inspection form generation
+ Invoicing, Receipts and Statement of Account
+ Customer management
+ Stock management
+ Purchase orders
+ Repair orders
+ Control checks
+ Calibration Checks with notifications
+ MOE Repository
+
+I want to create a mobile app that will comprise only of the Inspections module. The Mobile App inspection module is a lightweight version of the Web App Inspection Module, that will be installed on tablets. The android mobile application will provide on-the-fly fill-in of the inspection reports, without the device being connected to the internet. When the device reaches the internet, all of the information that has been saved on it will be synchronized with the central database and be accessible from the company’s PCs. The mobile app will allow the user to fill-in inspection reports on a mobile device (smartphone or tablet)
+
+The Inspections module will be mainly used by Inspection users to generate inspection reports, manage stock and be notified about upcoming checks that need to be performed.
+Within the Inspections Report management section, Inspection users will be able to fill-in, review, save and download inspection reports through the system. Inspection reports will be automatically invoiced. Inspection users will be able to upload images to the reports on predefined places, download the reports, save for continuing on a later stage and finalize.
+The software will handle the following types of inspections:
+	For Industry services:
+o	Metallic Structures – Visual Inspection, Magnetic Particle, Penetrant, Ultrasonic
+o	LPG Tanks – Written Practice scheme, Reports (Different for 2 companies) and Certificates
+o	Welder Approvals – 3 Samples
+	For Aviation services:
+o	Wheels (Tire change/Overhaul) 
+o	Brakes (Repairing/Overhaul)
+o	Non-Destructive Testing (NDT) 
+Each of these types will have an activity register, where the data is held.
+A generic workflow for all inspections will be consisted of the following steps:
+1.	Repair Order submission – A report that holds the information for the inspection(s) to be performed.
+2.	Worksheet submission – Worksheet for the specific components. Details about the work. (NDT Inspections on aircraft do not have this step)
+3.	NDT Report generation – Fill all the required reports for the selected type of inspection.
+4.	Parts – Record the parts that have been used during the work.
+5.	Issue EASA F1 (where applicable) – A Certification of compliance with the aviation standard and Workshop report.
+6.	Invoicing.
+The Stock Management section includes all the functionality to allow Inspection users to manage the stock of incoming/outgoing components and their compliance with the standards. Users are able to add, edit or delete a component, and update its quantity.
+Through the Notification Center of this module, Inspection users will be notified about upcoming Control and Calibration checks. They will be able to mark a check as “done” once completed.
+Lastly, Inspections module includes Barcode Generation & Integration section. The system will automatically distinguish reports and components with unique barcodes. Upon scanning these barcodes, users will be able to overview the corresponding report/stock item.
+
+for now just make the screens and the navigation to work only. No need to work on any other functionalities. This will be a base prototype. This will be a mobile application
