@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.ndt.flapcheckapp">
+
+  <application
+      android:label="FlapCheckApp"
+      android:icon="@mipmap/appicon"
+      android:roundIcon="@mipmap/appicon_round"
+      android:theme="@style/Maui.SplashTheme" />
+
+  <!-- MAUI adds permissions & activities for you; add extras here only if you need them -->
+</manifest>
+
