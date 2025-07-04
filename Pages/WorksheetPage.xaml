@@ -11,7 +11,7 @@
                    FontAttributes="Bold"
                    HorizontalOptions="Center" />
 
-            <Frame BackgroundColor="LightBlue" HasShadow="True">
+            <Frame BackgroundColor="LightGray" HasShadow="True">
                 <VerticalStackLayout Spacing="10">
                     <Label Text="Component Details" FontSize="16" FontAttributes="Bold" />
                     

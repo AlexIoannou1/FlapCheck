@@ -11,7 +11,7 @@
                    FontAttributes="Bold"
                    HorizontalOptions="Center" />
 
-            <Frame BackgroundColor="LightGreen" HasShadow="True">
+            <Frame BackgroundColor="LightGray" HasShadow="True">
                 <VerticalStackLayout Spacing="10">
                     <Label Text="Report Information" FontSize="16" FontAttributes="Bold" />
                     
@@ -21,10 +21,18 @@
                     
                     <Label Text="Test Results" FontSize="14" FontAttributes="Bold" />
                     <Editor Placeholder="Document inspection findings..." HeightRequest="100" />
-                    
-                    <Label Text="Defects Found" FontSize="14" FontAttributes="Bold" />
-                    <CheckBox x:Name="DefectsFoundCheckbox" />
-                    
+
+                    <HorizontalStackLayout Spacing="8">
+                        <!-- Spacing adds a small gap -->
+                        <Label Text="Defects Found"
+                               FontSize="14"
+                               FontAttributes="Bold" 
+                               VerticalOptions="Center"
+                               VerticalTextAlignment="Center"/>
+                        <CheckBox x:Name="DefectsFoundCheckbox" 
+                                  VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+
                     <Label Text="Images" FontSize="14" FontAttributes="Bold" />
                     <Button Text="Add Photo" BackgroundColor="DarkBlue" TextColor="White" />
                     

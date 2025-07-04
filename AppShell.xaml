@@ -4,28 +4,30 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:FlapCheckApp.Pages"
-    Title="FlapCheck">
+    Title="FlapCheck"
+    Shell.FlyoutBehavior="Disabled">
 
+    <!-- Bottom Tab Bar Navigation -->
     <TabBar>
-        <ShellContent
-            Title="Dashboard"
-            ContentTemplate="{DataTemplate local:DashboardPage}"
-            Route="DashboardPage" />
+        <ShellContent Title="Dashboard" 
+                      Icon="home_24.png"
+                      Route="DashboardPage" 
+                      ContentTemplate="{DataTemplate local:DashboardPage}" />
 
-        <ShellContent
-            Title="Inspections"
-            ContentTemplate="{DataTemplate local:InspectionsPage}"
-            Route="InspectionsPage" />
+        <ShellContent Title="Inspections" 
+                      Icon="clipboard_24.png" 
+                      Route="InspectionsPage" 
+                      ContentTemplate="{DataTemplate local:InspectionsPage}" />
 
-        <ShellContent
-            Title="Stock"
-            ContentTemplate="{DataTemplate local:StockPage}"
-            Route="StockPage" />
+        <ShellContent Title="Stock" 
+                      Icon="package_24.png" 
+                      Route="StockPage" 
+                      ContentTemplate="{DataTemplate local:StockPage}" />
 
-        <ShellContent
-            Title="Notifications"
-            ContentTemplate="{DataTemplate local:NotificationsPage}"
-            Route="NotificationsPage" />
+        <ShellContent Title="Notifications" 
+                      Icon="bell_24.png" 
+                      Route="NotificationsPage" 
+                      ContentTemplate="{DataTemplate local:NotificationsPage}" />
     </TabBar>
 
 </Shell>

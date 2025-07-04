@@ -1,4 +1,263 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="FlapCheckApp.Pages.DashboardPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:system="clr-namespace:System;assembly=netstandard"
+             Title="Dashboard"
+             Shell.BackgroundColor="{StaticResource Primary}">
+
+    <ScrollView>
+        <Grid Padding="16" RowSpacing="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!-- Welcome Section --><!--
+            <Frame Grid.Row="0" Style="{StaticResource CardFrame}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" 
+                           Text="Welcome to FlapCheck Pro" 
+                           Style="{StaticResource TitleStyle}" />
+
+                    <Label Grid.Row="1" 
+                           Text="Your comprehensive aviation inspection management system" 
+                           Style="{StaticResource SubtitleStyle}" 
+                           Margin="0,8,0,0" />
+
+                    <Label Grid.Row="2" 
+                           Text="{Binding Source={x:Static system:DateTime.Now}, StringFormat='Today: {0:dddd, MMMM dd, yyyy}'}" 
+                           Style="{StaticResource CaptionStyle}" 
+                           Margin="0,12,0,0" />
+                </Grid>
+            </Frame>-->
+
+            <!-- Quick Stats -->
+            <Label Grid.Row="1" 
+                   Text="Quick Overview" 
+                   Style="{StaticResource TitleStyle}" 
+                   Margin="16,0,0,0" />
+
+            <Grid Grid.Row="2" ColumnSpacing="12">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Active Inspections -->
+                <Frame Grid.Column="0" Style="{StaticResource SmallCard}">
+                    <StackLayout Spacing="8">
+                        <Image Source="search_24.png" 
+                               HorizontalOptions="Center" />
+                        <Label Text="12" 
+                               FontSize="32" 
+                               FontAttributes="Bold" 
+                               TextColor="{StaticResource Primary}" 
+                               HorizontalOptions="Center" />
+                        <Label Text="Active Inspections" 
+                               Style="{StaticResource CaptionStyle}" 
+                               HorizontalOptions="Center" />
+                    </StackLayout>
+                </Frame>
+
+                <!-- Pending Reports -->
+                <Frame Grid.Column="1" Style="{StaticResource SmallCard}">
+                    <StackLayout Spacing="8">
+                        <Image Source="clipboard_24.png" 
+                               HorizontalOptions="Center" />
+                        <Label Text="7" 
+                               FontSize="32" 
+                               FontAttributes="Bold" 
+                               TextColor="{StaticResource Secondary}" 
+                               HorizontalOptions="Center" />
+                        <Label Text="Pending Reports" 
+                               Style="{StaticResource CaptionStyle}" 
+                               HorizontalOptions="Center" />
+                    </StackLayout>
+                </Frame>
+            </Grid>
+
+            <!-- Quick Actions -->
+            <Label Grid.Row="3" 
+                   Text="Quick Actions" 
+                   Style="{StaticResource TitleStyle}" 
+                   Margin="16,0,0,0" />
+
+            <Grid Grid.Row="4" RowSpacing="16">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <!-- Start New Inspection -->
+                <Frame Grid.Row="0" Style="{StaticResource CardFrame}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <!--<Label Grid.Column="0" 
+                               Text="✈️" 
+                               FontSize="24" 
+                               VerticalOptions="Center" />-->
+
+                        <Image Source="airplane_24.png" 
+                               HorizontalOptions="Center" />
+
+                        <StackLayout Grid.Column="1" Spacing="4" Margin="16,0,0,0">
+                            <Label Text="Start New Inspection" 
+                                   Style="{StaticResource BodyStyle}" 
+                                   FontAttributes="Bold" />
+                            <Label Text="Begin aircraft inspection process" 
+                                   Style="{StaticResource CaptionStyle}" />
+                        </StackLayout>
+
+                        <Button Grid.Column="2" 
+                                Text="Start" 
+                                Style="{StaticResource AccentButton}" 
+                                Clicked="OnStartInspectionClicked" />
+                    </Grid>
+                </Frame>
+
+                <!-- View Reports -->
+                <Frame Grid.Row="1" Style="{StaticResource CardFrame}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <!--<Label Grid.Column="0" 
+                               Text="📊" 
+                               FontSize="24" 
+                               VerticalOptions="Center" />-->
+
+                        <Image Source="report_24.png" 
+                               HorizontalOptions="Center" />
+
+                        <StackLayout Grid.Column="1" Spacing="4" Margin="16,0,0,0">
+                            <Label Text="View Reports" 
+                                   Style="{StaticResource BodyStyle}" 
+                                   FontAttributes="Bold" />
+                            <Label Text="Access inspection reports and analytics" 
+                                   Style="{StaticResource CaptionStyle}" />
+                        </StackLayout>
+
+                        <Button Grid.Column="2" 
+                                Text="View" 
+                                Style="{StaticResource SecondaryButton}" />
+                    </Grid>
+                </Frame>
+
+                <!-- Manage Stock -->
+                <Frame Grid.Row="2" Style="{StaticResource CardFrame}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <!--<Label Grid.Column="0" 
+                               Text="📦" 
+                               FontSize="24" 
+                               VerticalOptions="Center" />-->
+                        
+                        <Image Source="package_24.png" 
+                               HorizontalOptions="Center" />
+
+                        <StackLayout Grid.Column="1" Spacing="4" Margin="16,0,0,0">
+                            <Label Text="Manage Stock" 
+                                   Style="{StaticResource BodyStyle}" 
+                                   FontAttributes="Bold" />
+                            <Label Text="Update parts inventory and supplies" 
+                                   Style="{StaticResource CaptionStyle}" />
+                        </StackLayout>
+
+                        <Button Grid.Column="2" 
+                                Text="Manage" 
+                                Style="{StaticResource SecondaryButton}" />
+                    </Grid>
+                </Frame>
+
+                <!-- Recent Activity -->
+                <Frame Grid.Row="3" Style="{StaticResource CardFrame}">
+                    <StackLayout Spacing="16">
+                        <Label Text="Recent Activity" 
+                               Style="{StaticResource BodyStyle}" 
+                               FontAttributes="Bold" />
+
+                        <StackLayout Spacing="8">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+
+                                <Ellipse Grid.Column="0" 
+                                         WidthRequest="8" 
+                                         HeightRequest="8" 
+                                         Fill="{StaticResource Success}" 
+                                         VerticalOptions="Center" />
+
+                                <Label Grid.Column="1" 
+                                       Text="Inspection A-320-001 completed" 
+                                       Style="{StaticResource CaptionStyle}" 
+                                       Margin="12,0,0,0" />
+
+                                <Label Grid.Column="2" 
+                                       Text="2h ago" 
+                                       Style="{StaticResource CaptionStyle}" 
+                                       TextColor="{StaticResource Gray400}" />
+                            </Grid>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+
+                                <Ellipse Grid.Column="0" 
+                                         WidthRequest="8" 
+                                         HeightRequest="8" 
+                                         Fill="{StaticResource Warning}" 
+                                         VerticalOptions="Center" />
+
+                                <Label Grid.Column="1" 
+                                       Text="Parts order #1234 delayed" 
+                                       Style="{StaticResource CaptionStyle}" 
+                                       Margin="12,0,0,0" />
+
+                                <Label Grid.Column="2" 
+                                       Text="4h ago" 
+                                       Style="{StaticResource CaptionStyle}" 
+                                       TextColor="{StaticResource Gray400}" />
+                            </Grid>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage>
+
+<!--<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FlapCheckApp.Pages.DashboardPage"
@@ -60,4 +319,4 @@
         </VerticalStackLayout>
     </ScrollView>
 
-</ContentPage>
+</ContentPage>-->

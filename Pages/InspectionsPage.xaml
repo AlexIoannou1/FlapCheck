@@ -38,7 +38,7 @@
                 <VerticalStackLayout>
                     <Grid ColumnDefinitions="*,Auto" ColumnSpacing="10">
                         <Label Grid.Column="0" Text="1. Repair Order Submission" FontSize="16" FontAttributes="Bold" VerticalOptions="Center" />
-                        <Button Grid.Column="1" Text="Start" BackgroundColor="Green" TextColor="White" Clicked="OnRepairOrderClicked" />
+                        <Button Grid.Column="1" Text="Start" BackgroundColor="Blue" TextColor="White" Clicked="OnRepairOrderClicked" />
                     </Grid>
                     <Label Text="Submit repair order with inspection information" FontSize="12" TextColor="Gray" />
                 </VerticalStackLayout>
@@ -49,7 +49,7 @@
                 <VerticalStackLayout>
                     <Grid ColumnDefinitions="*,Auto" ColumnSpacing="10">
                         <Label Grid.Column="0" Text="2. Worksheet Submission" FontSize="16" FontAttributes="Bold" VerticalOptions="Center" />
-                        <Button Grid.Column="1" Text="Start" BackgroundColor="Orange" TextColor="White" Clicked="OnWorksheetClicked" />
+                        <Button Grid.Column="1" Text="Start" BackgroundColor="Blue" TextColor="White" Clicked="OnWorksheetClicked" />
                     </Grid>
                     <Label Text="Complete worksheet for specific components (Industry only)" FontSize="12" TextColor="Gray" />
                 </VerticalStackLayout>
@@ -71,7 +71,7 @@
                 <VerticalStackLayout>
                     <Grid ColumnDefinitions="*,Auto" ColumnSpacing="10">
                         <Label Grid.Column="0" Text="4. Parts Recording" FontSize="16" FontAttributes="Bold" VerticalOptions="Center" />
-                        <Button Grid.Column="1" Text="Start" BackgroundColor="Purple" TextColor="White" Clicked="OnPartsClicked" />
+                        <Button Grid.Column="1" Text="Start" BackgroundColor="Blue" TextColor="White" Clicked="OnPartsClicked" />
                     </Grid>
                     <Label Text="Record parts used during inspection work" FontSize="12" TextColor="Gray" />
                 </VerticalStackLayout>
@@ -82,7 +82,7 @@
                 <VerticalStackLayout>
                     <Grid ColumnDefinitions="*,Auto" ColumnSpacing="10">
                         <Label Grid.Column="0" Text="5. Issue EASA F1 Certificate" FontSize="16" FontAttributes="Bold" VerticalOptions="Center" />
-                        <Button Grid.Column="1" Text="Generate" BackgroundColor="DarkGreen" TextColor="White" />
+                        <Button Grid.Column="1" Text="Generate" BackgroundColor="Blue" TextColor="White" />
                     </Grid>
                     <Label Text="Generate certification of compliance (where applicable)" FontSize="12" TextColor="Gray" />
                 </VerticalStackLayout>
@@ -93,7 +93,7 @@
                 <VerticalStackLayout>
                     <Grid ColumnDefinitions="*,Auto" ColumnSpacing="10">
                         <Label Grid.Column="0" Text="6. Invoicing" FontSize="16" FontAttributes="Bold" VerticalOptions="Center" />
-                        <Button Grid.Column="1" Text="Create" BackgroundColor="DarkRed" TextColor="White" Clicked="OnInvoicingClicked" />
+                        <Button Grid.Column="1" Text="Create" BackgroundColor="Blue" TextColor="White" Clicked="OnInvoicingClicked" />
                     </Grid>
                     <Label Text="Generate invoice for completed inspection" FontSize="12" TextColor="Gray" />
                 </VerticalStackLayout>

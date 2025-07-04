@@ -11,7 +11,7 @@
                    FontAttributes="Bold"
                    HorizontalOptions="Center" />
 
-            <Frame BackgroundColor="LightCoral" HasShadow="True">
+            <Frame BackgroundColor="LightGray" HasShadow="True">
                 <VerticalStackLayout Spacing="10">
                     <Label Text="Part Information" FontSize="16" FontAttributes="Bold" />
                     
