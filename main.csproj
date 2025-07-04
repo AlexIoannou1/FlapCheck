@@ -25,14 +25,20 @@
   <ItemGroup>
     <MauiIcon Include="Resources\AppIcon\appicon.svg" Color="#512BD4" />
     <MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
-    <MauiImage Include="Resources\Images\*" />
     <MauiFont Include="Resources\Fonts\*" />
+    <MauiImage Include="Resources\Images\*" />
     <MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
   </ItemGroup>
 
 
   <ItemGroup>
     <None Remove="Platforms\Android\AndroidManifest.xml" />
+    <None Remove="Resources\Images\airplane_24.png" />
+    <None Remove="Resources\Images\bell_24.png" />
+    <None Remove="Resources\Images\clipboard_24.png" />
+    <None Remove="Resources\Images\package_24.png" />
+    <None Remove="Resources\Images\report_24.png" />
+    <None Remove="Resources\Images\search_24.png" />
   </ItemGroup>
 
 
